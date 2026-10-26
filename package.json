@@ -1,0 +1,25 @@
+{
+  "name": "conexion-ny13",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc --outDir .domain-build --module commonjs --moduleResolution node --target ES2022 --strict --skipLibCheck --noEmit false src/types.ts src/content/text.ts src/domain/rules.ts src/domain/case.ts && node -e \"require('fs').writeFileSync('.domain-build/package.json',JSON.stringify({type:'commonjs'}))\" && node --test tests/*.test.cjs"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^4.4.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
